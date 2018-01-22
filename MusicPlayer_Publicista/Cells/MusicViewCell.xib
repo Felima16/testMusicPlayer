@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicCell" id="KGk-i7-Jjw" customClass="MusicViewCell" customModule="MusicPlayer_Publicista" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome musica" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs2-24-J0B">
+                        <rect key="frame" x="16" y="11" width="206" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFs-hd-fNL">
+                        <rect key="frame" x="16" y="35.5" width="206" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4E-cW-iPR">
+                        <rect key="frame" x="227" y="9" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="o4E-cW-iPR" secondAttribute="height" multiplier="1:1" id="ayf-X5-Cin"/>
+                            <constraint firstAttribute="width" constant="40" id="zmJ-aH-dWc"/>
+                        </constraints>
+                        <state key="normal" title="Play">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="playActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1j8-v9-rqr"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7k-me-2wX">
+                        <rect key="frame" x="275" y="9" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.0" green="0.54901960780000003" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="W0h-NG-8ue"/>
+                            <constraint firstAttribute="width" secondItem="U7k-me-2wX" secondAttribute="height" multiplier="1:1" id="oTf-gN-pF1"/>
+                        </constraints>
+                        <state key="normal" title="Down">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="downloadActionButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="a6Y-lo-6F8"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="o4E-cW-iPR" firstAttribute="leading" secondItem="PFs-hd-fNL" secondAttribute="trailing" constant="5" id="B8a-TZ-QDc"/>
+                    <constraint firstItem="gs2-24-J0B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Esn-43-bnu"/>
+                    <constraint firstItem="PFs-hd-fNL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="HBK-Lu-yaG"/>
+                    <constraint firstItem="PFs-hd-fNL" firstAttribute="top" secondItem="gs2-24-J0B" secondAttribute="bottom" constant="5" id="J8o-oP-N6Y"/>
+                    <constraint firstAttribute="trailing" secondItem="U7k-me-2wX" secondAttribute="trailing" constant="5" id="Moz-As-JRD"/>
+                    <constraint firstAttribute="bottom" secondItem="PFs-hd-fNL" secondAttribute="bottom" constant="7" id="Xxt-No-8vF"/>
+                    <constraint firstItem="U7k-me-2wX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YZ3-kh-axj"/>
+                    <constraint firstItem="U7k-me-2wX" firstAttribute="leading" secondItem="o4E-cW-iPR" secondAttribute="trailing" constant="8" id="dMi-1x-9wN"/>
+                    <constraint firstItem="gs2-24-J0B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qAE-K1-Z2c"/>
+                    <constraint firstItem="o4E-cW-iPR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rQW-dx-sHa"/>
+                    <constraint firstItem="o4E-cW-iPR" firstAttribute="leading" secondItem="gs2-24-J0B" secondAttribute="trailing" constant="5" id="uUn-Cr-EFP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistLabel" destination="PFs-hd-fNL" id="A3n-Y0-uQi"/>
+                <outlet property="downloadButton" destination="U7k-me-2wX" id="HeH-Bt-G4m"/>
+                <outlet property="playButton" destination="o4E-cW-iPR" id="wwS-gm-jJ3"/>
+                <outlet property="songLabel" destination="gs2-24-J0B" id="ybt-un-OtI"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="62"/>
+        </tableViewCell>
+    </objects>
+</document>
